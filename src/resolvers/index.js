@@ -21,11 +21,11 @@ export const resolvers = {
   },
   Mutation: {
     createArticle: async (_, article) => createArticle(article),
-    updateArticle: async (_, { id, title, body }) => updateArticle(id, title, body),
+    updateArticle: async (_, { id, title, body }) => updateArticle({ id, title, body }),
     deleteArticle: async (_, { id }) => deleteArticle(id),
 
     createAuthor: async (_, author) => createAuthor(author),
-    updateAuthor: async (_, { id, name, email, bio }) => updateAuthor(id, name, email, bio),
+    updateAuthor: async (_, { id, name, email, bio }) => updateAuthor({ id, name, email, bio }),
     deleteAuthor: async (_, { id }) => deleteAuthor(id),
   },
 };

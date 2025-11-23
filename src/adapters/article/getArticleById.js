@@ -1,5 +1,6 @@
 import { articleRepository } from '#repository';
 import { NotFound } from '#errors';
+import { RESPONSE_MESSAGE } from '#enum';
 
 export async function getArticleById(id) {
   const article = await articleRepository.findOne({ _id: id });

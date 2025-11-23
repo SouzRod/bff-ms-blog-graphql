@@ -21,6 +21,7 @@ O propósito principal deste projeto é reforçar a compreensão dos conceitos e
 * Criação de resolvers
 * Operações de Query e Mutation
 * Relacionamento entre tipos
+* Tratamento de erros
 
 ---
 
