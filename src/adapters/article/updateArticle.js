@@ -1,9 +1,9 @@
 import { RESPONSE_MESSAGE } from '#enum';
 import { NotFound } from '#errors';
-import { articleRepository } from '#repository';
+import { articlesRepository } from '#repository';
 
 export async function updateArticle({ id, title, body }) {
-  const hasArticle = await articleRepository.findOne({ _id: id });
+  const hasArticle = await articlesRepository.findOne({ _id: id });
   if (!hasArticle) throw new NotFound(RESPONSE_MESSAGE.ERROR.ARTICLE_NOT_FOUND);
 
   const articleToUpdate = {
@@ -14,6 +14,6 @@ export async function updateArticle({ id, title, body }) {
     createdAt: hasArticle.createdAt,
     updatedAt: new Date(),
   };
-  await articleRepository.updateOne({ _id: id }, articleToUpdate);
+  await articlesRepository.updateOne({ _id: id }, articleToUpdate);
   return RESPONSE_MESSAGE.SUCCESS.UPDATE_ARTICLE;
 }
