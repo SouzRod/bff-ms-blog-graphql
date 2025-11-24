@@ -22,7 +22,12 @@ const codeToStatus = Object.fromEntries(
 
 const statusToCode = Object.fromEntries([
   ...Object.entries(STATUS_CODES).map(([code, message]) => [message.toUpperCase().replace(/\s+/g, '_'), Number(code)]),
+  ['GRAPHQL_PARSE_FAILED', 500],
+  ['GRAPHQL_VALIDATION_FAILED', 500],
   ['BAD_USER_INPUT', 400],
+  ['PERSISTED_QUERY_NOT_FOUND', 404],
+  ['PERSISTED_QUERY_NOT_SUPPORTED', 400],
+  ['OPERATION_RESOLUTION_FAILURE', 500],
 ]);
 
 export const RESPONSE_MESSAGE = Object.freeze({
