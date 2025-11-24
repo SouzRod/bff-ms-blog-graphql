@@ -6,7 +6,7 @@ import {
   deleteAuthor,
 } from '#adapters';
 
-export const resolvers = {
+export const authors = {
   queries: {
     getAuthorById: async (_, { id }) => getAuthorById(id),
     getAuthors: async () => getAuthors(),

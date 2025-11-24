@@ -5,7 +5,8 @@ export class BaseError extends GraphQLError {
   constructor(status, message) {
     super(message, {
       extensions: {
-        code: CODE_TO_STATUS[status]
+        code: CODE_TO_STATUS[status],
+        http: { status: status }
       },
     });
   }

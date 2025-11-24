@@ -1,5 +1,5 @@
-import { articles } from './article';
-import { authors } from './author';
+import { articles } from './article.js';
+import { authors } from './author.js';
 
 export const resolvers = {
   Query: {
