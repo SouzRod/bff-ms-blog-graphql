@@ -15,12 +15,6 @@ async function connectToDatabase() {
     state.db = state.client.db(configs.mongo.db);
   } catch (error) {
     console.error('Failed on connectToDatabase method:', error);
-    if (STATUS_TO_CODE[error.code] === 400) {
-      throw new BadRequest(error.message);
-    }
-    if (STATUS_TO_CODE[error.code] === 409) {
-      throw new Conflict(error.message);
-    }
     throw new InternalServerError(error.message);
   }
 }
