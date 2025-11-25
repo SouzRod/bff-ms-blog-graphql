@@ -105,13 +105,13 @@ index.js        # Inicialização do servidor Apollo
 src/
   ├── schemas/     # Definição dos typeDefs
   ├── resolvers/   # Implementação das queries e mutations
-  └──adapters/     # Regras de negócio
+  └── adapters/    # Regras de negócio
 commons/
   ├── config/      # Arquivo para centralizar as chamadas das variaveis de ambiente
   ├── database/    # Conexão com o banco de dados
   ├── enum/        # enumerator
   ├── errors/      # Pasta com os tratamentos de erros e as Classes de Erros Customizadas
-  └──repository/   # Chamada dos métodos de acesso ao banco de dados
+  └── repository/  # Chamada dos métodos de acesso ao banco de dados
 ```
 
 ---
