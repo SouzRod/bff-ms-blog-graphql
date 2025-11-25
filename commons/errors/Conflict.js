@@ -1,8 +1,8 @@
 import { BaseError } from './BaseError.js';
-import { STATUS_TO_CODE } from '#enum';
+import { STATUS_CODE } from '#enum';
 
 export class Conflict extends BaseError {
   constructor(message) {
-    super(STATUS_TO_CODE.CONFLICT, message);
+    super(STATUS_CODE.CONFLICT, message);
   }
 }

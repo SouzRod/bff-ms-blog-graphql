@@ -1,11 +1,11 @@
-import { CODE_TO_STATUS } from '#enum';
+import { STATUS_MESSAGE } from '#enum';
 import { GraphQLError } from 'graphql';
 
 export class BaseError extends GraphQLError {
   constructor(status, message) {
     super(message, {
       extensions: {
-        code: CODE_TO_STATUS[status],
+        code: STATUS_MESSAGE[status],
         http: { status: status }
       },
     });

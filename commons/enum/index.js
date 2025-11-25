@@ -35,5 +35,5 @@ export const RESPONSE_MESSAGE = Object.freeze({
   ERROR,
 });
 
-export const CODE_TO_STATUS = Object.freeze(codeToStatus);
-export const STATUS_TO_CODE = Object.freeze(statusToCode);
+export const STATUS_MESSAGE = Object.freeze(codeToStatus);
+export const STATUS_CODE = Object.freeze(statusToCode);
